@@ -4,14 +4,20 @@
 
 ```mermaid
 ---
-title: Animal example
+title: My Bun Repository Template Dependencies
 ---
 classDiagram
-  class BunBase {
-    + file package.json
+  class bun-base {
+    + package.json
     + .github/workflows/ci.yaml
   }
-  note for Bun "Bun is Bun Application shorthand.\nShorter name is better for use in cli."
-  BunBase <-- Bun
-  Bun <-- BunLib
+  class bun-lib {
+    + coverall support
+  }
+  class bun {
+    + docker support
+    + PackageJson.private = true
+  }
+  bun-base <-- bun-lib
+  bun-lib <-- bun
 ```
