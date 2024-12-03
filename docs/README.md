@@ -17,6 +17,7 @@ classDiagram
   class bun {
     + docker support
     + PackageJson.private = true
+    + entry points
   }
   bun-base <-- bun-lib
   bun-lib <-- bun
